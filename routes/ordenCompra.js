@@ -127,7 +127,7 @@ router.get('/detail/:id', function (req, res) {
                     ])
                     .withFields(['ord_cmp_det.id',
                         'ord_cmp_det.cantidad as cantidad',
-                        'ord_cmp_det.precio_unitario as precioUnitario',
+                        'ord_cmp_det.precio_unitario_venta as precioUnitario',
                         'pro.nombre as nombreProducto',
                         'ord_cmp_det.total as subTotal'
                     ])
@@ -182,7 +182,7 @@ router.post('/create', function(req, res) {
                         orden_compra_id: ordenId,
                         producto_id: det.idProducto,
                         cantidad: det.cantidad,
-                        precio_unitario: det.precioUnitario,
+                        precio_unitario_venta: det.precioUnitario,
                         total: det.cantidad*det.precioUnitario,
                         fecha_creacion:  new Date().toLocaleString(),
                         fecha_modificacion:  new Date().toLocaleString(),
@@ -260,7 +260,7 @@ router.post('/orden_es', function(req, res)
                     orden_entrada_salida_id: ordenId,
                     producto_id: det.idProducto,
                     cantidad: det.cantidad,
-                    precio_unitario: det.precioUnitario,
+                    precio_unitario_venta: det.precioUnitario,
                     total: det.cantidad*det.precioUnitario,
                     fecha_creacion:  new Date().toLocaleString(),
                     fecha_modificacion:  new Date().toLocaleString(),

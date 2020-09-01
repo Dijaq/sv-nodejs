@@ -50,6 +50,7 @@ const articuloRouter = require('./routes/articulos');
 const comprobanteRouter = require('./routes/comprobantes');
 const homeRouter = require('./routes/home');
 const ordenEntradaSalida = require('./routes/ordenEntradaSalida');
+const authentication = require('./routes/auth');
 
 app.use('/api/personas', personaRouter);
 app.use('/api/tipoDocumentos', tipoDocumentoRouter);
@@ -64,6 +65,7 @@ app.use('/api/articulos', articuloRouter);
 app.use('/api/comprobantes', comprobanteRouter);
 app.use('/api/home', homeRouter);
 app.use('/api/ordenEntradaSalida', ordenEntradaSalida);
+app.use('/api/auth', authentication);
 
 
 

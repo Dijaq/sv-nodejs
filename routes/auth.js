@@ -98,6 +98,4 @@ router.post('/register', [
         }).catch(err => res.status(433).json({error: err}));
     }
 });
-
-
 module.exports = router;

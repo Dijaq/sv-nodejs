@@ -10,12 +10,20 @@ const bcrypt = require('bcryptjs');
     db: 'sistema_de_ventas'
 });*/
 
-let conn = new Mysqli({
+/*let conn = new Mysqli({
     Host: 'https://delphic-justice.000webhostapp.com/', // IP/domain name 
     post: 3306, // port, default 3308
     user: 'id14687969_root', // username 
     passwd: '7MSzi6cTRt|5d/7H', // password 
     db: 'id14687969_sistema_ventas'
+});*/
+
+let conn = new Mysqli({
+    Host: 'http://localhost/', // IP/domain name 
+    post: 3306, // port, default 3308
+    user: 'root', // username 
+    passwd: 'db_never7shaD_', // password 
+    db: 'sistema_de_ventas'
 });
 
 let db = conn.emit(false, '');

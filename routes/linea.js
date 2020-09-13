@@ -81,6 +81,7 @@ router.post('/create', function(req, res) {
             console.log(err)
             res.json({message: err})
         });
+    res.json({message: req.body});
     res.json({message: 'Se ingreso la linea satisfactoriamente', success: true});
 });
 

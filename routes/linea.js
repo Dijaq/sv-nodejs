@@ -81,7 +81,7 @@ router.post('/create', function(req, res) {
             console.log(err)
             res.json({message: err})
         });
-    res.json({message: 'Se ingreso satisfactoriamente', success: true});
+    res.json({message: 'Se ingreso la linea satisfactoriamente', success: true});
 });
 
 router.put('/:id', function(req, res) {

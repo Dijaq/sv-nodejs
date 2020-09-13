@@ -20,12 +20,22 @@ const bcrypt = require('bcryptjs');
 
 let conn = new Mysqli({
     //Host: 'http://localhost/', // IP/domain name 
-    Host: 'http://127.0.0.1/',
+    Host: 'http://127.0.0.1',
     post: 3306, // port, default 3308
     user: 'root', // username 
     passwd: 'db_never7shaD_', // password 
     db: 'sistema_de_ventas'
 });
+
+
+/*let conn = new Mysqli({
+    //Host: 'http://localhost/', // IP/domain name 
+    Host: 'http:/104.131.20.39',
+    post: 3306, // port, default 3308
+    user: 'root', // username 
+    passwd: 'db_never7shaD_', // password 
+    db: 'sistema_de_ventas'
+});*/
 
 let db = conn.emit(false, '');
 

@@ -77,7 +77,10 @@ router.post('/create', function(req, res) {
             fecha_modificacion:  new Date().toLocaleString(),
             estado: req.body.estado
 
-        }).catch(err=>console.log(err));
+        }).catch(err=>{
+            console.log(err)
+            res.json({message: err})
+        });
     res.json({message: 'Se ingreso satisfactoriamente', success: true});
 });
 

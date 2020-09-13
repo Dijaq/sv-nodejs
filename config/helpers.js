@@ -2,13 +2,13 @@ const Mysqli = require('mysqli');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
-let conn = new Mysqli({
+/*let conn = new Mysqli({
     Host: 'localhost', // IP/domain name 
     post: 3306, // port, default 3308
     user: 'root', // username 
     passwd: 'never7shaD_', // password 
     db: 'sistema_de_ventas'
-});
+});*/
 
 /*let conn = new Mysqli({
     Host: 'https://delphic-justice.000webhostapp.com/', // IP/domain name 
@@ -18,14 +18,14 @@ let conn = new Mysqli({
     db: 'id14687969_sistema_ventas'
 });*/
 
-/*let conn = new Mysqli({
+let conn = new Mysqli({
     //Host: 'http://localhost/', // IP/domain name 
     Host: 'http://127.0.0.1',
     post: 3306, // port, default 3308
     user: 'root', // username 
     passwd: 'db_never7shaD_', // password 
     db: 'sistema_de_ventas'
-});*/
+});
 
 
 /*let conn = new Mysqli({

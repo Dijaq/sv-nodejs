@@ -169,8 +169,8 @@ router.post('/create', function(req, res) {
             fecha: req.body.fecha,
             monto_total: req.body.montoTotal,
             estado_orden: 1,
-            fecha_creacion:  new Date().toLocaleString(),
-            fecha_modificacion:  new Date().toLocaleString(),
+            fecha_creacion:  new Date(),
+            fecha_modificacion:  new Date(),
             estado: req.body.estado
         })
         .then((ordenId) => {
@@ -184,8 +184,8 @@ router.post('/create', function(req, res) {
                         cantidad: det.cantidad,
                         precio_unitario_venta: det.precioUnitario,
                         total: det.cantidad*det.precioUnitario,
-                        fecha_creacion:  new Date().toLocaleString(),
-                        fecha_modificacion:  new Date().toLocaleString(),
+                        fecha_creacion:  new Date(),
+                        fecha_modificacion:  new Date(),
                         estado: 2
                     })
                     .catch(err=>console.log(err));
@@ -208,8 +208,8 @@ router.post('/create', function(req, res) {
                                 stock: det.cantidad,
                                 precio_venta: det.precioUnitario,
                                 precio_compra: det.precioUnitario,                    
-                                fecha_creacion:  new Date().toLocaleString(),
-                                fecha_modificacion:  new Date().toLocaleString(),
+                                fecha_creacion:  new Date(),
+                                fecha_modificacion:  new Date(),
                                 estado: 2
 
                             })
@@ -247,8 +247,8 @@ router.post('/orden_es', function(req, res)
         numero_orden: req.body.numeroOrden,
         fecha: req.body.fecha,
         monto_total: req.body.montoTotal,
-        fecha_creacion:  new Date().toLocaleString(),
-        fecha_modificacion:  new Date().toLocaleString(),
+        fecha_creacion:  new Date(),
+        fecha_modificacion:  new Date(),
         estado: req.body.estado
     })
     .then((ordenId) => {
@@ -262,8 +262,8 @@ router.post('/orden_es', function(req, res)
                     cantidad: det.cantidad,
                     precio_unitario_venta: det.precioUnitario,
                     total: det.cantidad*det.precioUnitario,
-                    fecha_creacion:  new Date().toLocaleString(),
-                    fecha_modificacion:  new Date().toLocaleString(),
+                    fecha_creacion:  new Date(),
+                    fecha_modificacion:  new Date(),
                     estado: 2
                 })
                 .catch(err=>console.log(err));

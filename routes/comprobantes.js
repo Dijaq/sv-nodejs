@@ -141,7 +141,7 @@ router.post('/create', function(req, res) {
 
     let persona_id = 1
     let sucursal_id = 1
-    let fecha = new Date().toLocaleString()
+    let fecha = new Date()
     let tipo_comprobante_id = 1
     let numeroComprobante;
     //console.log("Get: "+getLastComprobante())
@@ -168,8 +168,8 @@ router.post('/create', function(req, res) {
                 numero_comprobante: numeroComprobante,
                 monto_total: req.body.montoTotal,
                 fecha: fecha,
-                fecha_creacion:  new Date().toLocaleString(),
-                fecha_modificacion:  new Date().toLocaleString(),
+                fecha_creacion:  new Date(),
+                fecha_modificacion:  new Date(),
                 estado: 2
             })
             .then((idComprobante) => {
@@ -183,8 +183,8 @@ router.post('/create', function(req, res) {
                             cantidad: det.cantidad,
                             precio_unitario: det.precioUnitario,
                             total: det.cantidad*det.precioUnitario,
-                            fecha_creacion:  new Date().toLocaleString(),
-                            fecha_modificacion:  new Date().toLocaleString(),
+                            fecha_creacion:  new Date(),
+                            fecha_modificacion:  new Date(),
                             estado: 2
                         })
                         .catch(err=>console.log(err));
@@ -368,8 +368,8 @@ router.post('/orden_es', function(req, res)
         numero_orden: 1,
         fecha: fecha,
         monto_total: req.body.montoTotal,
-        fecha_creacion:  new Date().toLocaleString(),
-        fecha_modificacion:  new Date().toLocaleString(),
+        fecha_creacion:  new Date(),
+        fecha_modificacion:  new Date(),
         estado: 2
     })
     .then((ordenId) => {
@@ -383,8 +383,8 @@ router.post('/orden_es', function(req, res)
                     cantidad: det.cantidad,
                     precio_unitario: det.precioUnitario,
                     total: det.cantidad*det.precioUnitario,
-                    fecha_creacion:  new Date().toLocaleString(),
-                    fecha_modificacion:  new Date().toLocaleString(),
+                    fecha_creacion:  new Date(),
+                    fecha_modificacion:  new Date(),
                     estado: 2
                 })
                 .catch(err=>console.log(err));

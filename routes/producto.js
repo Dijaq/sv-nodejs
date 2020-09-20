@@ -6,7 +6,7 @@ const { Router } = require('express');
 
 /*GET ALL PERSONAS*/
 router.get('/', function (req, res) { 
-    console.log( new Date().toLocaleString());
+    //console.log( new Date().toLocaleString());
     let page = (req.query.page !== undefined && req.query.page !== 0) ? req.query.page : 1;
     const limit = (req.query.limit !== undefined && req.query.limit !== 0) ? req.query.limit : 10;   // set limit of items per page
     let startValue;
@@ -155,8 +155,8 @@ router.post('/create', function(req, res) {
             linea_id: req.body.idLinea,
             marca_id: req.body.idMarca,
             unidad_medida_id: req.body.idUnidadMedida,
-            fecha_creacion:  new Date().toLocaleString(),
-            fecha_modificacion:  new Date().toLocaleString(),
+            fecha_creacion:  new Date(),
+            fecha_modificacion:  new Date(),
             estado: req.body.estado
 
         }).catch(err=>console.log(err));
@@ -177,7 +177,7 @@ router.put('/:id', function(req, res) {
             linea_id: req.body.idLinea,
             marca_id: req.body.idMarca,
             unidad_medida_id: req.body.idUnidadMedida,
-            fecha_modificacion:  new Date().toLocaleString(),
+            fecha_modificacion:  new Date(),
             estado: req.body.estado
 
         })

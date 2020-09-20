@@ -74,8 +74,8 @@ router.post('/create', function(req, res) {
         .insert({
             nombre: req.body.nombre,
             acronimo: req.body.acronimo,
-            fecha_creacion:  new Date().toLocaleString(),
-            fecha_modificacion:  new Date().toLocaleString(),
+            fecha_creacion:  new Date(),
+            fecha_modificacion:  new Date(),
             estado: req.body.estado
 
         }).catch(err=>console.log(err));
@@ -90,7 +90,7 @@ router.put('/:id', function(req, res) {
         .update({
             nombre: req.body.nombre,
             acronimo: req.body.acronimo,
-            fecha_modificacion:  new Date().toLocaleString(),
+            fecha_modificacion:  new Date(),
             estado: req.body.estado
 
         })

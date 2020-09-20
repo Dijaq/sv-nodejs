@@ -67,7 +67,7 @@ router.get('/:id', function (req, res) {
 });
 
 /*CREAR LOS DATOS DE UNA LINEA*/
-router.post('/create', function(req, res) {
+router.post('/', function(req, res) {
     console.log(req.body);
     database.table('linea')
         .insert({

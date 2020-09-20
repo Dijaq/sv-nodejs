@@ -77,11 +77,14 @@ router.post('/create', function(req, res) {
             fecha_modificacion:  new Date().toLocaleString(),
             estado: req.body.estado
 
-        }).catch(err=>{
+        }).then((idLinea) => {
+            res.json({message: idLinea});
+        })
+        .catch(err=>{
             console.log(err)
             res.json({message: err})
         });
-    res.json({message: res});
+    
     res.json({message: 'Se ingreso la linea satisfactoriamente', success: true});
 });
 

@@ -73,8 +73,8 @@ router.post('/create', function(req, res) {
         .insert({
             nombre: req.body.nombre,
             acronimo: req.body.acronimo,
-            fecha_creacion:  new Date().toLocaleString(),
-            fecha_modificacion:  new Date().toLocaleString(),
+            fecha_creacion:  new Date(),
+            fecha_modificacion:  new Date(),
             estado: req.body.estado
 
         }).then((idLinea) => {

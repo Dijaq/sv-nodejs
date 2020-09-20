@@ -67,7 +67,7 @@ router.get('/:id', function (req, res) {
 });
 
 /*CREAR LOS DATOS DE UNA LINEA*/
-router.post('/', function(req, res) {
+router.post('/create', function(req, res) {
     console.log(req.body);
     database.table('linea')
         .insert({
@@ -96,7 +96,7 @@ router.put('/:id', function(req, res) {
         .update({
             nombre: req.body.nombre,
             acronimo: req.body.acronimo,
-            fecha_modificacion:  new Date().toLocaleString(),
+            fecha_modificacion:  new Date(),
             estado: req.body.estado
 
         })
